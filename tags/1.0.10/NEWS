@@ -1,0 +1,22 @@
+This is the NEWS for chan_ss7. This version is maintained by Anders Baekgaard (ab@dicea.dk).
+Please send bug reports, feature requests etc. to chan_ss7@dicea.dk.
+
+New in version 1.1
+- Fixed buffer overflows in config.c
+- Fixed loss of IDLE CICs
+- Fixed segmentation fault when using "combined" attribute for linksets.
+- Fixed block/unblock of last cic not possible bug
+- Jitter buffer handling (thanks to Martin Vít)
+
+New in verion 1.0.0
+- Compatible with asterisk 1.2.x and 1.4.x.
+- MTP stack placed in standalone executable.
+- New loadshare config parameter for linksets (None, linkset, combined).
+- New combined config parameter for linksets. Linksets having the same combined
+  setting and having loadshare=combined share signalling channels.
+- New auto_block config parameter for links. When set to yes, the CICs on that link
+  are blocked when signalling on the link is lost.
+- The schannel entry in link description in configuration file may specify remote MTP stack.
+- PDU dump is now in PCAP format, suitable for wireshark.
+- Lots and lots of clean ups and fixes.
+
